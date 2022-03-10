@@ -153,11 +153,12 @@ test('get last item from array', (expect) => {
 });
 
 test('returns a random number between 0 and 5', (expect) => {
-    const expected = 
+    const answer = getRandomNumber();
+    // const expected = answer = 0 || answer = 1 || answer = 2 || answer = 3 || answer = 4 || answer = 5;
 
-    const actual = getRandomNumber();
+    // const actual = getRandomNumber();
 
-    expect.equal(actual, expected);
+    expect.equal(typeof answer, 'number');
 });
 
 
