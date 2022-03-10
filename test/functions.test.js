@@ -197,11 +197,17 @@ test('get last item', (expect) => {
 
 test('get a random number', (expect) => {
     const answer = getRandomNumber();
-    // const expected = answer = 0 || answer = 1 || answer = 2 || answer = 3 || answer = 4 || answer = 5;
 
-    // const actual = getRandomNumber();
-
-    expect.equal(typeof answer, 'number', 'returns a random number between 0 and 5');
+    const actual = getRandomNumber();
+    const between0And5 = actual === 0
+                    || actual === 1 
+                    || actual === 2 
+                    || actual === 3 
+                    || actual === 4 
+                    || actual === 5;
+    // other option const between0And5 = [1, 2, 3, 4, 5].includes(actual);
+    // better than nothing 
+    expect.equal(between0And5, true);
 });
 
 
