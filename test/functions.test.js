@@ -8,17 +8,23 @@ import {
 const { test, skip } = QUnit;
 
 test('should add exclamation points to string', (expect) => {
-    const expected = '' + '!!!';
+    const expected = '!!!';
 
     const actual = addExclamationPoints('');
 
     expect.equal(actual, expected);
 
-    const expected2 = 'bunny rabbit' + '!!!';
+    const expected2 = 'bunny rabbit!!!';
 
     const actual2 = addExclamationPoints('bunny rabbit');
     
     expect.equal(actual2, expected2);
+
+    const expected3 = 'oh no!!!';
+
+    const actual3 = addExclamationPoints('oh no');
+    
+    expect.equal(actual3, expected3);
 });
 
 test('should take a number, multiply it by seven, and then return the product', (expect) => {
@@ -33,6 +39,12 @@ test('should take a number, multiply it by seven, and then return the product', 
     const actual2 = multiplyBySeven(5);
     
     expect.equal(actual2, expected2);
+
+    const expected3 = 49;
+
+    const actual3 = multiplyBySeven(7);
+    
+    expect.equal(actual3, expected3);
 });
 
 
@@ -48,6 +60,12 @@ test('multiply a number by 12 then divide it in half', (expect) => {
     const actual2 = multiplyBy12ThenHalve(4);
     
     expect.equal(actual2, expected2);
+
+    const expected3 = 18;
+
+    const actual3 = multiplyBy12ThenHalve(3);
+    
+    expect.equal(actual3, expected3);
 });
 
 test('first number divided by second number then multiplied by the third number ', (expect) => {
@@ -62,6 +80,12 @@ test('first number divided by second number then multiplied by the third number 
     const actual2 = divideThenMultiply(9, 3, 5);
     
     expect.equal(actual2, expected2);
+
+    const expected3 = 10;
+
+    const actual3 = divideThenMultiply(10, 5, 5);
+    
+    expect.equal(actual3, expected3);
 });
 
 test('takes in three numbers and returns an array', (expect) => {
@@ -76,6 +100,12 @@ test('takes in three numbers and returns an array', (expect) => {
     const actual2 = returnAsAnArray(9, 3, 5);
     
     expect.deepEqual(actual2, expected2);
+
+    const expected3 = [2, 1, 5];
+
+    const actual3 = returnAsAnArray(2, 1, 5);
+    
+    expect.deepEqual(actual3, expected3);
 });
 
 test('takes in three numbers and returns them as a string', (expect) => {
@@ -90,6 +120,12 @@ test('takes in three numbers and returns them as a string', (expect) => {
     const actual2 = returnAsAString(9, 3, 5);
     
     expect.equal(actual2, expected2);
+
+    const expected3 = '2000100566';
+
+    const actual3 = returnAsAString(2000, 100, 566);
+    
+    expect.equal(actual3, expected3);
 });
 
 test('takes in two numbers and adds them together then places the sum into a string', (expect) => {
@@ -104,21 +140,14 @@ test('takes in two numbers and adds them together then places the sum into a str
     const actual2 = makeLuckyGreeting(15, 17);
     
     expect.equal(actual2, expected2);
-});
 
-test('takes in two numbers and adds them together then places the sum into a string', (expect) => {
-    const expected = 'Hello! your lucky number for the day is 12';
+    const expected3 = 'Hello! your lucky number for the day is 40';
 
-    const actual = makeLuckyGreeting(8, 4);
-
-    expect.equal(actual, expected);
-
-    const expected2 = 'Hello! your lucky number for the day is 32';
-
-    const actual2 = makeLuckyGreeting(15, 17);
+    const actual3 = makeLuckyGreeting(20, 20);
     
-    expect.equal(actual2, expected2);
+    expect.equal(actual3, expected3);
 });
+
 
 test('get second item from array', (expect) => {
     const fruits = ['kiwi', 'apple', 'orange', 'plum'];
@@ -134,6 +163,13 @@ test('get second item from array', (expect) => {
     const actual2 = getSecondItem(cars);
     
     expect.equal(actual2, expected2);
+
+    const sounds = ['quack', 'woof', 'boing', 'cacaw'];
+    const expected3 = 'woof';
+
+    const actual3 = getSecondItem(sounds);
+    
+    expect.equal(actual3, expected3);
 });
 
 test('get last item from array', (expect) => {
@@ -150,6 +186,13 @@ test('get last item from array', (expect) => {
     const actual2 = getLastItem(cars);
     
     expect.equal(actual2, expected2);
+
+    const sounds = ['quack', 'woof', 'boink', 'cacaw'];
+    const expected3 = 'cacaw';
+
+    const actual3 = getLastItem(sounds);
+
+    expect.equal(actual3, expected3);
 });
 
 test('returns a random number between 0 and 5', (expect) => {
